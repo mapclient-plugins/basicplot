@@ -1,4 +1,3 @@
-
 '''
 MAP Client Plugin Step
 '''
@@ -20,10 +19,10 @@ class BasicPlotStep(WorkflowStepMountPoint):
 
     def __init__(self, location):
         super(BasicPlotStep, self).__init__('Basic Plot', location)
-        self._configured = False # A step cannot be executed until it has been configured.
+        self._configured = False  # A step cannot be executed until it has been configured.
         self._category = 'Model Viewer'
         # Add any other initialisation code here:
-        self._icon =  QtGui.QImage(':/basicplotstep/images/model-viewer.png')
+        self._icon = QtGui.QImage(':/basicplotstep/images/model-viewer.png')
         # Ports:
         self.addPort(('http://physiomeproject.org/workflow/1.0/rdf-schema#port',
                       'http://physiomeproject.org/workflow/1.0/rdf-schema#uses',
@@ -144,6 +143,3 @@ class BasicPlotStep(WorkflowStepMountPoint):
         while len_ports > target_ports_len:
             self._ports.pop()
             len_ports = len(self._ports)
-
-
-

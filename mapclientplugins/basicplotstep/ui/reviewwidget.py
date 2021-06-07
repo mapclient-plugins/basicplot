@@ -66,7 +66,7 @@ class ReviewWidget(QtWidgets.QWidget):
             marker = 'ko'
             if "marker" in dataset and dataset["marker"]:
                 marker = dataset["marker"]
-            self._replace_datasets[key] = self._plot.plot(dataset["x"],dataset["y"], marker)
+            self._replace_datasets[key] = self._plot.plot(dataset["x"], dataset["y"], marker)
 
         self._ui.widgetPlot.draw()
 
