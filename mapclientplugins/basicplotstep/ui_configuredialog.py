@@ -1,57 +1,79 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qt\configuredialog.ui'
-#
-# Created: Fri Aug 12 15:12:07 2016
-#      by: pyside-uic 0.2.15 running on PySide 1.2.4
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'configuredialog.ui'
+##
+## Created by: Qt User Interface Compiler version 5.15.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PySide import QtCore, QtGui
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
+
 
 class Ui_ConfigureDialog(object):
     def setupUi(self, ConfigureDialog):
-        ConfigureDialog.setObjectName("ConfigureDialog")
+        if not ConfigureDialog.objectName():
+            ConfigureDialog.setObjectName(u"ConfigureDialog")
         ConfigureDialog.resize(418, 303)
-        self.gridLayout = QtGui.QGridLayout(ConfigureDialog)
-        self.gridLayout.setObjectName("gridLayout")
-        self.configGroupBox = QtGui.QGroupBox(ConfigureDialog)
-        self.configGroupBox.setTitle("")
-        self.configGroupBox.setObjectName("configGroupBox")
-        self.formLayout = QtGui.QFormLayout(self.configGroupBox)
-        self.formLayout.setObjectName("formLayout")
-        self.label0 = QtGui.QLabel(self.configGroupBox)
-        self.label0.setObjectName("label0")
-        self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.label0)
-        self.lineEdit0 = QtGui.QLineEdit(self.configGroupBox)
-        self.lineEdit0.setObjectName("lineEdit0")
-        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.lineEdit0)
-        self.checkBoxAddResults = QtGui.QCheckBox(self.configGroupBox)
-        self.checkBoxAddResults.setObjectName("checkBoxAddResults")
-        self.formLayout.setWidget(2, QtGui.QFormLayout.LabelRole, self.checkBoxAddResults)
-        self.checkBoxReplaceResults = QtGui.QCheckBox(self.configGroupBox)
-        self.checkBoxReplaceResults.setObjectName("checkBoxReplaceResults")
-        self.formLayout.setWidget(3, QtGui.QFormLayout.LabelRole, self.checkBoxReplaceResults)
-        self.label0_2 = QtGui.QLabel(self.configGroupBox)
+        self.gridLayout = QGridLayout(ConfigureDialog)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.configGroupBox = QGroupBox(ConfigureDialog)
+        self.configGroupBox.setObjectName(u"configGroupBox")
+        self.formLayout = QFormLayout(self.configGroupBox)
+        self.formLayout.setObjectName(u"formLayout")
+        self.label0 = QLabel(self.configGroupBox)
+        self.label0.setObjectName(u"label0")
+
+        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.label0)
+
+        self.lineEdit0 = QLineEdit(self.configGroupBox)
+        self.lineEdit0.setObjectName(u"lineEdit0")
+
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.lineEdit0)
+
+        self.checkBoxAddResults = QCheckBox(self.configGroupBox)
+        self.checkBoxAddResults.setObjectName(u"checkBoxAddResults")
+
+        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.checkBoxAddResults)
+
+        self.checkBoxReplaceResults = QCheckBox(self.configGroupBox)
+        self.checkBoxReplaceResults.setObjectName(u"checkBoxReplaceResults")
+
+        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.checkBoxReplaceResults)
+
+        self.label0_2 = QLabel(self.configGroupBox)
+        self.label0_2.setObjectName(u"label0_2")
         self.label0_2.setWordWrap(True)
-        self.label0_2.setObjectName("label0_2")
-        self.formLayout.setWidget(1, QtGui.QFormLayout.SpanningRole, self.label0_2)
+
+        self.formLayout.setWidget(1, QFormLayout.SpanningRole, self.label0_2)
+
+
         self.gridLayout.addWidget(self.configGroupBox, 0, 0, 1, 1)
-        self.buttonBox = QtGui.QDialogButtonBox(ConfigureDialog)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
+
+        self.buttonBox = QDialogButtonBox(ConfigureDialog)
+        self.buttonBox.setObjectName(u"buttonBox")
+        self.buttonBox.setOrientation(Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
+
         self.gridLayout.addWidget(self.buttonBox, 1, 0, 1, 1)
 
+
         self.retranslateUi(ConfigureDialog)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), ConfigureDialog.accept)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), ConfigureDialog.reject)
-        QtCore.QMetaObject.connectSlotsByName(ConfigureDialog)
+        self.buttonBox.accepted.connect(ConfigureDialog.accept)
+        self.buttonBox.rejected.connect(ConfigureDialog.reject)
+
+        QMetaObject.connectSlotsByName(ConfigureDialog)
+    # setupUi
 
     def retranslateUi(self, ConfigureDialog):
-        ConfigureDialog.setWindowTitle(QtGui.QApplication.translate("ConfigureDialog", "ConfigureDialog", None, QtGui.QApplication.UnicodeUTF8))
-        self.label0.setText(QtGui.QApplication.translate("ConfigureDialog", "identifier:  ", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBoxAddResults.setText(QtGui.QApplication.translate("ConfigureDialog", "Add results port", None, QtGui.QApplication.UnicodeUTF8))
-        self.checkBoxReplaceResults.setText(QtGui.QApplication.translate("ConfigureDialog", "Replace results port", None, QtGui.QApplication.UnicodeUTF8))
-        self.label0_2.setText(QtGui.QApplication.translate("ConfigureDialog", "Select at least one of the add results or replace results port:", None, QtGui.QApplication.UnicodeUTF8))
+        ConfigureDialog.setWindowTitle(QCoreApplication.translate("ConfigureDialog", u"ConfigureDialog", None))
+        self.configGroupBox.setTitle("")
+        self.label0.setText(QCoreApplication.translate("ConfigureDialog", u"identifier:  ", None))
+        self.checkBoxAddResults.setText(QCoreApplication.translate("ConfigureDialog", u"Add results port", None))
+        self.checkBoxReplaceResults.setText(QCoreApplication.translate("ConfigureDialog", u"Replace results port", None))
+        self.label0_2.setText(QCoreApplication.translate("ConfigureDialog", u"Select at least one of the add results or replace results port:", None))
+    # retranslateUi
 
