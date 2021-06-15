@@ -1,49 +1,68 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qt\reviewwidget.ui'
-#
-# Created: Thu Mar 17 02:39:36 2016
-#      by: pyside-uic 0.2.15 running on PySide 1.2.4
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'reviewwidget.ui'
+##
+## Created by: Qt User Interface Compiler version 5.15.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-from PySide import QtCore, QtGui
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
+
+from mapclientplugins.basicplotstep.ui.matplotlibwidget import MatplotlibWidget
+
 
 class Ui_ReviewWidget(object):
     def setupUi(self, ReviewWidget):
-        ReviewWidget.setObjectName("ReviewWidget")
+        if not ReviewWidget.objectName():
+            ReviewWidget.setObjectName(u"ReviewWidget")
         ReviewWidget.resize(592, 467)
-        self.horizontalLayout = QtGui.QHBoxLayout(ReviewWidget)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.groupBox = QtGui.QGroupBox(ReviewWidget)
-        self.groupBox.setTitle("")
-        self.groupBox.setObjectName("groupBox")
-        self.verticalLayout = QtGui.QVBoxLayout(self.groupBox)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.pushButtonClear = QtGui.QPushButton(self.groupBox)
-        self.pushButtonClear.setObjectName("pushButtonClear")
+        self.horizontalLayout = QHBoxLayout(ReviewWidget)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.groupBox = QGroupBox(ReviewWidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.verticalLayout = QVBoxLayout(self.groupBox)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.pushButtonClear = QPushButton(self.groupBox)
+        self.pushButtonClear.setObjectName(u"pushButtonClear")
+
         self.verticalLayout.addWidget(self.pushButtonClear)
-        spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem)
-        self.pushButtonDone = QtGui.QPushButton(self.groupBox)
-        self.pushButtonDone.setObjectName("pushButtonDone")
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.pushButtonDone = QPushButton(self.groupBox)
+        self.pushButtonDone.setObjectName(u"pushButtonDone")
+
         self.verticalLayout.addWidget(self.pushButtonDone)
+
+
         self.horizontalLayout.addWidget(self.groupBox)
+
         self.widgetPlot = MatplotlibWidget(ReviewWidget)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        self.widgetPlot.setObjectName(u"widgetPlot")
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.widgetPlot.sizePolicy().hasHeightForWidth())
         self.widgetPlot.setSizePolicy(sizePolicy)
-        self.widgetPlot.setObjectName("widgetPlot")
+
         self.horizontalLayout.addWidget(self.widgetPlot)
 
+
         self.retranslateUi(ReviewWidget)
-        QtCore.QMetaObject.connectSlotsByName(ReviewWidget)
+
+        QMetaObject.connectSlotsByName(ReviewWidget)
+    # setupUi
 
     def retranslateUi(self, ReviewWidget):
-        ReviewWidget.setWindowTitle(QtGui.QApplication.translate("ReviewWidget", "Review", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButtonClear.setText(QtGui.QApplication.translate("ReviewWidget", "Clear", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButtonDone.setText(QtGui.QApplication.translate("ReviewWidget", "Done", None, QtGui.QApplication.UnicodeUTF8))
+        ReviewWidget.setWindowTitle(QCoreApplication.translate("ReviewWidget", u"Review", None))
+        self.groupBox.setTitle("")
+        self.pushButtonClear.setText(QCoreApplication.translate("ReviewWidget", u"Clear", None))
+        self.pushButtonDone.setText(QCoreApplication.translate("ReviewWidget", u"Done", None))
+    # retranslateUi
 
-from mapclientplugins.basicplotstep.ui.matplotlibwidget import MatplotlibWidget

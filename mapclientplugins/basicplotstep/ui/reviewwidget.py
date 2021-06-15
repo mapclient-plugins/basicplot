@@ -1,4 +1,4 @@
-from PySide import QtGui
+from PySide2 import QtWidgets
 
 import json
 from mapclientplugins.basicplotstep.ui.ui_reviewwidget import Ui_ReviewWidget
@@ -6,7 +6,7 @@ from mapclientplugins.basicplotstep.ui.ui_reviewwidget import Ui_ReviewWidget
 colours = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
 
 
-class ReviewWidget(QtGui.QWidget):
+class ReviewWidget(QtWidgets.QWidget):
 
     def __init__(self, parent=None):
         super(ReviewWidget, self).__init__(parent)
@@ -66,7 +66,7 @@ class ReviewWidget(QtGui.QWidget):
             marker = 'ko'
             if "marker" in dataset and dataset["marker"]:
                 marker = dataset["marker"]
-            self._replace_datasets[key] = self._plot.plot(dataset["x"],dataset["y"], marker)
+            self._replace_datasets[key] = self._plot.plot(dataset["x"], dataset["y"], marker)
 
         self._ui.widgetPlot.draw()
 
