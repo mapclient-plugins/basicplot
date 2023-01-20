@@ -1,6 +1,5 @@
-from PySide2 import QtWidgets
+from PySide6 import QtWidgets
 
-import json
 from mapclientplugins.basicplotstep.ui.ui_reviewwidget import Ui_ReviewWidget
 
 colours = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
